@@ -33,7 +33,8 @@ fn main() {
         println!("\n --- --- \n");
 
         println!("[e] for edit todo.");
-        println!("[a] add todo.");
+        println!("[a] for add todo.");
+        println!("[q] for quit.");
 
         let mut mode = String::new();
 
@@ -44,6 +45,7 @@ fn main() {
         match mode.trim() {
             "a" => add_mode(&mut todos, &mut next_id),
             "e" => edit_mode(&mut todos),
+            "q" => break,
             _ => {
                 println!("Unexpected input.\n")
             }
